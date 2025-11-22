@@ -4,9 +4,9 @@ import os
 import subprocess
 import time
 
-# =========================
+# ==============================
 # Task 1: Basic Process Creation
-# =========================
+# ==============================
 def task1_process_creation(n):
     print(f"\n--- Task 1: Creating {n} child processes ---")
     for i in range(n):
