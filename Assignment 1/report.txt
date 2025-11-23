@@ -7,7 +7,9 @@ PROCESS MANAGEMENT REPORT
 
 Student Name: Dev
 Roll No.: 2301730073
-Course: Operating Systems Lab
+Subject: Operating Systems Lab 
+Course: B.Tech. C.S.E(Ai & Ml)
+Section: B
 Experiment No.: 1
 Topic: Process Creation and Management Using Python OS Module
 
