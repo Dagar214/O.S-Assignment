@@ -5,7 +5,8 @@
 ---
 
 ###  Course Details
-**Course:** Operating Systems Lab  
+**Course:** B.Tech. C.S.E(Ai & Ml)  
+**Subject:** Operating Systems Lab  
 **Experiment No.:** 1  
 **Topic:** Process Creation & Management  
 **Language Used:** Python  
