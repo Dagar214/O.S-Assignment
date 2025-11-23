@@ -46,7 +46,7 @@ The objective of this assignment is to:
 
 ## ✅ Tasks Implemented
 
-### 🔹 Sub-Task 1 – Logging Setup
+###  Sub-Task 1 – Logging Setup
 - Initialized logging with:
   - timestamps
   - process names
@@ -152,8 +152,7 @@ This assignment successfully demonstrates system-like behavior using Python mult
 
 ### ✅ Author
 **Student Name:** Dev  
-**Roll No:** 2301730073
-
+**Roll No:** 2301730073 
 **University:** K.R. Mangalam University
 
 ---
