@@ -1,1 +1,102 @@
-Report for Assignment 1
+# Report for Assignment 1
+
+=========================================
+OS LAB ASSIGNMENT 1
+PROCESS MANAGEMENT REPORT
+=========================================
+
+Student Name: Dev
+Roll No.: 2301730073
+Course: Operating Systems Lab
+Experiment No.: 1
+Topic: Process Creation and Management Using Python OS Module
+
+-----------------------------------------
+1. OBJECTIVE
+-----------------------------------------
+The objective of this experiment is to understand how processes are created, managed, and monitored in a Linux environment using Python. The program simulates process creation using fork(), executes commands, demonstrates zombie and orphan processes, reads process information from /proc, and shows priority scheduling using nice values.
+
+-----------------------------------------
+2. TOOLS & CONCEPTS USED
+-----------------------------------------
+• Python 3
+• os.fork()
+• os.execvp()
+• os.wait()
+• os._exit()
+• /proc filesystem
+• Process IDs (PID, PPID)
+• nice() for priority
+• subprocess / system commands
+
+-----------------------------------------
+3. TASK SUMMARY
+-----------------------------------------
+
+Task 1: Process Creation
+- Created N child processes using os.fork()
+- Each child printed PID and parent PID
+- Parent waited for all children
+
+Task 2: Command Execution
+- Child processes executed Linux commands (ls, date, ps)
+- Output displayed successfully
+
+Task 3: Zombie & Orphan Process
+- Zombie created by skipping wait() in parent
+- Orphan created when parent exited before child
+- Verified zombie using "ps -el | grep defunct"
+
+Task 4: /proc Inspection
+- Read process information from /proc/[pid]
+- Displayed status, executable path, file descriptors
+
+Task 5: Priority Scheduling
+- Multiple children ran CPU-heavy loops
+- Different nice values used (0, 5, 10)
+- Lower nice value completed first
+
+-----------------------------------------
+4. OBSERVATIONS
+-----------------------------------------
+• Each child process received a unique PID
+• Parent-child relationship was clearly visible
+• Zombie process remained in memory until parent terminated
+• Orphan process was adopted by PID 1 (systemd)
+• Priority affected execution speed of child processes
+• /proc directory provided detailed runtime information
+
+-----------------------------------------
+5. SAMPLE OUTPUT HIGHLIGHTS
+-----------------------------------------
+• Child PID and Parent PID printed correctly
+• Linux commands executed inside child processes
+• Zombie process shown as "defunct"
+• Process details displayed:
+  - Name
+  - State
+  - Memory usage
+  - Executable path
+  - Open file descriptors
+• Priority scheduling order observed:
+  1. nice = 0
+  2. nice = 5
+  3. nice = 10
+
+-----------------------------------------
+6. CONCLUSION
+-----------------------------------------
+This experiment successfully demonstrated process creation and management in Linux using Python. The tasks helped in understanding how fork(), exec(), wait(), zombie/orphan states, and priority scheduling work at the OS level. The /proc filesystem provided valuable information about running processes. Overall, the experiment strengthened the understanding of process lifecycle and scheduling in operating systems.
+
+-----------------------------------------
+7. LEARNING OUTCOMES
+-----------------------------------------
+• Understood how processes are created and managed
+• Learned the difference between parent and child processes
+• Observed zombie and orphan behaviors in real execution
+• Gained knowledge of /proc filesystem
+• Understood scheduling impact using nice values
+
+=========================================
+END OF REPORT
+=========================================
