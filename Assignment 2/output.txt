@@ -1,1 +1,54 @@
 # Output of program
+
+===============================
+OS LAB ASSIGNMENT 2 - OUTPUT LOG
+System Startup & Process Simulation
+===============================
+
+--------------------------------
+Program Execution Output
+--------------------------------
+System Starting...
+
+==============================
+     SYSTEM BOOTING UP...
+==============================
+
+System Shutdown Completed ✅
+Check process_log.txt for logs.
+
+--------------------------------
+Process Log Preview
+(process_log.txt)
+--------------------------------
+2025-07-16 12:35:21,005 - Process-1 - Process-1 started
+2025-07-16 12:35:21,006 - Process-2 - Process-2 started
+2025-07-16 12:35:21,007 - Background-Service - Background-Service started
+2025-07-16 12:35:23,007 - Process-1 - Process-1 ended
+2025-07-16 12:35:23,008 - Process-2 - Process-2 ended
+2025-07-16 12:35:23,009 - Background-Service - Background-Service ended
+
+--------------------------------
+Explanation of Output
+--------------------------------
+• The program simulates a system startup
+• Three processes were created:
+  - Process-1
+  - Process-2
+  - Background-Service
+• Each process executed a task (2-second delay)
+• Logging recorded the start and end time of each process
+• All processes completed successfully
+• System shutdown message printed
+
+--------------------------------
+Observed Behavior
+--------------------------------
+✅ Processes started concurrently
+✅ Logging captured timestamps and process names
+✅ Log file generated automatically
+✅ System shut down gracefully after process completion
+
+--------------------------------
+End of Output Log
+--------------------------------
