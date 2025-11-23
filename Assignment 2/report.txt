@@ -1,1 +1,98 @@
 # Report for Assignment 2
+
+=========================================
+OS LAB ASSIGNMENT 2
+SYSTEM STARTUP & PROCESS SIMULATION REPORT
+=========================================
+
+Student Name: Dev
+Roll No.: 2301730073
+Subject: Operating Systems Lab 
+Course: B.Tech. C.S.E(Ai & Ml)
+Section: B
+Experiment No.: 2
+Topic: System Startup, Process Creation & Termination Simulation
+
+-----------------------------------------
+1. OBJECTIVE
+-----------------------------------------
+The objective of this experiment is to simulate how an operating system initializes,
+creates processes, manages execution, and shuts down. The program uses the
+multiprocessing and logging modules in Python to represent system-like behavior,
+where multiple processes run concurrently and their execution details are recorded.
+
+-----------------------------------------
+2. TOOLS & CONCEPTS USED
+-----------------------------------------
+• Python 3
+• multiprocessing module
+• logging module
+• time module
+• Process creation and termination
+• Concurrent execution
+• Log file generation
+
+-----------------------------------------
+3. TASK SUMMARY
+-----------------------------------------
+
+Sub-Task 1: Logging Initialization
+- Configured logging with timestamps and process names
+- Output stored in process_log.txt
+
+Sub-Task 2: Process Function
+- Defined a dummy task simulating system process work
+- Included 2-second delay to represent execution
+
+Sub-Task 3: Process Creation
+- Created three child processes:
+  • Process-1
+  • Process-2
+  • Background-Service
+- Started all processes concurrently
+
+Sub-Task 4: Termination & Joining
+- Ensured all processes completed execution using join()
+- Displayed system shutdown message
+
+-----------------------------------------
+4. OBSERVATIONS
+-----------------------------------------
+• Multiple processes executed in parallel
+• Each process received a unique process name
+• Logging accurately recorded start and end times
+• Log file was successfully generated
+• Program terminated only after all processes finished
+• Output behavior resembled basic OS startup and shutdown
+
+-----------------------------------------
+5. SAMPLE LOG OUTPUT
+-----------------------------------------
+2025-07-16 12:35:21 - Process-1 - Process-1 started
+2025-07-16 12:35:21 - Process-2 - Process-2 started
+2025-07-16 12:35:21 - Background-Service - Background-Service started
+2025-07-16 12:35:23 - Process-1 - Process-1 ended
+2025-07-16 12:35:23 - Process-2 - Process-2 ended
+2025-07-16 12:35:23 - Background-Service - Background-Service ended
+
+-----------------------------------------
+6. CONCLUSION
+-----------------------------------------
+This experiment successfully simulated a basic system startup sequence using
+Python multiprocessing. The creation, execution, and termination of multiple
+processes were observed, and logging provided a clear trace of system activity.
+The simulation improved understanding of how an operating system handles
+process execution and shutdown procedures.
+
+-----------------------------------------
+7. LEARNING OUTCOMES
+-----------------------------------------
+• Understood system startup and shutdown flow
+• Learned multiprocessing in Python
+• Observed concurrent process execution
+• Understood process termination using join()
+• Used logging for process monitoring
+
+=========================================
+END OF REPORT
+=========================================
