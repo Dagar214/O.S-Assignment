@@ -16,7 +16,7 @@
 ## 📁 Folder Contents
 This folder contains:
 
-Assignment1/
+Assignment1
 │
 ├── process_management.py
 ├── output.txt
@@ -66,7 +66,6 @@ Reads:
 - Observes scheduling order
 
 ---
-
 ## 🛠️ How to Run the Program
 
 ### ✅ Step 1: Open Terminal
