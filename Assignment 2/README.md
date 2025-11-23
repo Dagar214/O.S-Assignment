@@ -15,8 +15,10 @@
 
 ## Folder Contents
 
-Assignment2/ 
-│ 
+Assignment2
+
+│
+
 ├── Process_Management.py
 
 ├── output.txt
