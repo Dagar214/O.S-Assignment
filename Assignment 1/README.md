@@ -18,10 +18,10 @@ This folder contains:
 
 Assignment1
 │
-├── process_management.py
-├── output.txt
-├── report.txt
-└── README.md
+├ ── process_management.py
+├ ── output.txt
+├ ── report.txt
+└ ── README.md
 
 
 ---
