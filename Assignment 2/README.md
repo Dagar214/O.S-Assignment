@@ -3,7 +3,7 @@
 
 ---
 
-### 📌 Course Details
+### Course Details
 **Course:** Operating Systems Lab  
 **Experiment No.:** 2  
 **Topic:** System Startup, Process Creation & Termination Simulation  
@@ -12,7 +12,7 @@
 
 ---
 
-## 📁 Folder Contents
+## Folder Contents
 
 Assignment2/
 
@@ -52,23 +52,23 @@ The objective of this assignment is to:
   - messages
 - Output stored in `process_log.txt`
 
-### 🔹 Sub-Task 2 – Process Function
+###  Sub-Task 2 – Process Function
 - Created a dummy system process
 - Simulated execution using `time.sleep()`
 
-### 🔹 Sub-Task 3 – Process Creation
+###  Sub-Task 3 – Process Creation
 - Created 3 concurrent processes:
   - Process-1
   - Process-2
   - Background-Service
 
-### 🔹 Sub-Task 4 – Termination
+###  Sub-Task 4 – Termination
 - Used `join()` to ensure proper shutdown
 - Displayed completion message
 
 ---
 
-## 🛠️ How to Run the Program
+##  How to Run the Program
 
 ### ✅ Step 1: Open Terminal
 
@@ -90,9 +90,8 @@ Enter the number to execute a task.
 
 ---
 
-## 📌 Sample Output Preview
+##  Sample Output Preview
 
-==============================
 SYSTEM BOOTING UP...
 
 System Shutdown Completed ✅
@@ -104,10 +103,12 @@ More detailed output available in:
 
 ---
 
-## 📝 Log File Preview (process_log.txt)
+##  Log File Preview (process_log.txt)
 
 2025-07-16 12:35:21 - Process-1 - Process-1 started
+
 2025-07-16 12:35:21 - Process-2 - Process-2 started
+
 2025-07-16 12:35:21 - Background-Service - Background-Service started
 
 
@@ -124,7 +125,7 @@ After completing this assignment, we learned:
 
 ---
 
-## 📝 Files Description
+##  Files Description
 
 | File | Description |
 |------|-------------|
@@ -143,7 +144,7 @@ After completing this assignment, we learned:
 
 ---
 
-## 🚀 Conclusion
+##  Conclusion
 This assignment successfully demonstrates system-like behavior using Python multiprocessing. The simulation helps understand how an operating system initializes, runs, monitors, and terminates processes.
 
 ---
@@ -151,6 +152,7 @@ This assignment successfully demonstrates system-like behavior using Python mult
 ### ✅ Author
 **Student Name:** Dev  
 **Roll No:** 2301730073
+
 **University:** K.R. Mangalam University
 
 ---
