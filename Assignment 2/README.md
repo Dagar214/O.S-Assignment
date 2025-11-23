@@ -106,11 +106,11 @@ More detailed output available in:
 
 ##  Log File Preview (process_log.txt)
 
-2025-07-16 12:35:21 - Process-1 - Process-1 started
+2025-07-16  - Process-1 - Process-1 started
 
-2025-07-16 12:35:21 - Process-2 - Process-2 started
+2025-07-16  - Process-2 - Process-2 started
 
-2025-07-16 12:35:21 - Background-Service - Background-Service started
+2025-07-16  - Background-Service - Background-Service started
 
 
 ---
