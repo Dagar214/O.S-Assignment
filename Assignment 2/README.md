@@ -4,7 +4,8 @@
 ---
 
 ### Course Details
-**Course:** Operating Systems Lab  
+**Course:** B.Tech. C.S.E(Ai & Ml) 
+**Subject:** Operating Systems Lab 
 **Experiment No.:** 2  
 **Topic:** System Startup, Process Creation & Termination Simulation  
 **Language Used:** Python  
