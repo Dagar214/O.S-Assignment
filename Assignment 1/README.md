@@ -1,10 +1,10 @@
 # Assignment 1
-# 🧪 OS Lab Assignment 1  
+#  OS Lab Assignment 1  
 ## Process Management Using Python (os Module)
 
 ---
 
-### 📌 Course Details
+###  Course Details
 **Course:** Operating Systems Lab  
 **Experiment No.:** 1  
 **Topic:** Process Creation & Management  
@@ -13,7 +13,7 @@
 
 ---
 
-## 📁 Folder Contents
+##  Folder Contents
 This folder contains:
 
 Assignment1
@@ -44,29 +44,29 @@ The objective of this assignment is to:
 
 ## ✅ Tasks Implemented
 
-### 🔹 Task 1 – Process Creation
+###  Task 1 – Process Creation
 - Creates `N` child processes
 - Displays:
   - PID
   - Parent PID
 
-### 🔹 Task 2 – Command Execution
+###  Task 2 – Command Execution
 - Executes system commands inside child processes:
   - `ls`
   - `date`
   - `ps`
 
-### 🔹 Task 3 – Zombie & Orphan
+###  Task 3 – Zombie & Orphan
 - Zombie created by not calling `wait()`
 - Orphan created when parent exits early
 
-### 🔹 Task 4 – /proc Information
+###  Task 4 – /proc Information
 Reads:
 - Process status
 - Executable path
 - Open file descriptors
 
-### 🔹 Task 5 – Priority Scheduling
+###  Task 5 – Priority Scheduling
 - Assigns different `nice()` values
 - Observes scheduling order
 
@@ -92,7 +92,7 @@ You will see a menu:
 Enter the task number to run.
 
 ---
-## 📌 Sample Output (Short Preview)
+##  Sample Output (Short Preview)
 
 --- Task 1: Creating 3 child processes ---
 Child 0: PID = 2412, Parent PID = 2408
@@ -116,7 +116,7 @@ After completing this assignment, we learned:
 
 ---
 
-## 📝 Files Description
+##  Files Description
 
 | File | Description |
 |------|-------------|
@@ -133,12 +133,12 @@ After completing this assignment, we learned:
 - Access to `/proc` filesystem
 ---
 
-## 🚀 Conclusion
+##  Conclusion
 This assignment successfully demonstrates process handling concepts in Operating Systems using Python. It provides practical understanding of how Linux manages processes and scheduling.
 
 ---
 
-### ✅ Author
+###  Author
 **Student Name:** Dev  
 **Roll No:** 2301730073  
 **University:** K.R. Mangalam University
