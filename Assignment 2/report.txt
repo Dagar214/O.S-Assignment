@@ -1,98 +1,91 @@
-# Report for Assignment 2
+OPERATING SYSTEM LAB REPORT
 
-=========================================
-OS LAB ASSIGNMENT 2
-SYSTEM STARTUP & PROCESS SIMULATION REPORT
-=========================================
+============================================
+Experiment Title: Process Creation and Management Using Python OS Module
+========================================================================
 
-Student Name: Dev
-Roll No.: 2301730073
-Subject: Operating Systems Lab 
-Course: B.Tech. C.S.E(Ai & Ml)
-Section: B
-Experiment No.: 2
-Topic: System Startup, Process Creation & Termination Simulation
+Course: ENCS351 – Operating System
+Program: B.Tech CSE (AI & ML / DS / Cyber / FSD / UX-UI)
 
------------------------------------------
-1. OBJECTIVE
------------------------------------------
-The objective of this experiment is to simulate how an operating system initializes,
-creates processes, manages execution, and shuts down. The program uses the
-multiprocessing and logging modules in Python to represent system-like behavior,
-where multiple processes run concurrently and their execution details are recorded.
+============================================
 
------------------------------------------
-2. TOOLS & CONCEPTS USED
------------------------------------------
-• Python 3
-• multiprocessing module
-• logging module
-• time module
-• Process creation and termination
-• Concurrent execution
-• Log file generation
+1. AIM
+   ============================================
+   The aim of this experiment is to understand Linux process creation and management by simulating system calls such as fork(), exec(), wait(), and nice() using the Python OS module.
 
------------------------------------------
-3. TASK SUMMARY
------------------------------------------
+============================================
+2. OBJECTIVES
+=============
 
-Sub-Task 1: Logging Initialization
-- Configured logging with timestamps and process names
-- Output stored in process_log.txt
+• To create child processes using os.fork().
+• To understand parent–child process relationships.
+• To execute Linux commands using exec().
+• To simulate zombie and orphan processes.
+• To inspect process information using the /proc file system.
+• To study scheduling effects using process priority (nice values).
 
-Sub-Task 2: Process Function
-- Defined a dummy task simulating system process work
-- Included 2-second delay to represent execution
+============================================
+3. THEORY
+=========
 
-Sub-Task 3: Process Creation
-- Created three child processes:
-  • Process-1
-  • Process-2
-  • Background-Service
-- Started all processes concurrently
+3.1 Process
+A process is a program in execution. Each process has a unique Process ID (PID) assigned by the operating system.
 
-Sub-Task 4: Termination & Joining
-- Ensured all processes completed execution using join()
-- Displayed system shutdown message
+3.2 fork()
+fork() is a system call used to create a new process. It creates a child process that is an exact copy of the parent process.
 
------------------------------------------
-4. OBSERVATIONS
------------------------------------------
-• Multiple processes executed in parallel
-• Each process received a unique process name
-• Logging accurately recorded start and end times
-• Log file was successfully generated
-• Program terminated only after all processes finished
-• Output behavior resembled basic OS startup and shutdown
+3.3 exec()
+The exec() call replaces the current running process with a new program. It does not create a new process.
 
------------------------------------------
-5. SAMPLE LOG OUTPUT
------------------------------------------
-2025-07-16 12:35:21 - Process-1 - Process-1 started
-2025-07-16 12:35:21 - Process-2 - Process-2 started
-2025-07-16 12:35:21 - Background-Service - Background-Service started
-2025-07-16 12:35:23 - Process-1 - Process-1 ended
-2025-07-16 12:35:23 - Process-2 - Process-2 ended
-2025-07-16 12:35:23 - Background-Service - Background-Service ended
+3.4 Zombie Process
+A zombie process is a process that has completed execution but still has an entry in the process table because the parent has not called wait().
 
------------------------------------------
-6. CONCLUSION
------------------------------------------
-This experiment successfully simulated a basic system startup sequence using
-Python multiprocessing. The creation, execution, and termination of multiple
-processes were observed, and logging provided a clear trace of system activity.
-The simulation improved understanding of how an operating system handles
-process execution and shutdown procedures.
+3.5 Orphan Process
+An orphan process is a process whose parent has terminated while the child is still running. It is adopted by init (PID 1).
 
------------------------------------------
-7. LEARNING OUTCOMES
------------------------------------------
-• Understood system startup and shutdown flow
-• Learned multiprocessing in Python
-• Observed concurrent process execution
-• Understood process termination using join()
-• Used logging for process monitoring
+3.6 /proc File System
+/proc is a virtual file system that provides information about running processes.
 
-=========================================
+3.7 nice()
+The nice value defines the priority of a process. Higher nice value means lower priority.
+
+============================================
+4. ALGORITHM
+============
+
+1. Import required modules (os, time, subprocess).
+2. Create child processes using fork().
+3. Display PIDs and PPIDs.
+4. Execute system commands using execvp().
+5. Simulate zombie and orphan processes.
+6. Read process details from /proc directory.
+7. Assign different nice values to child processes.
+8. Observe scheduling behavior.
+
+============================================
+5. SOURCE CODE
+==============
+
+(Refer to process_management.py file)
+
+============================================
+6. OUTPUT
+=========
+
+(Refer to output.txt file for detailed outputs of all tasks)
+
+============================================
+7. RESULT
+=========
+
+The experiment was successfully executed. Process creation, command execution, zombie and orphan states, process inspection, and scheduling behavior were observed correctly.
+
+============================================
+8. CONCLUSION
+=============
+
+This experiment provided hands-on understanding of Linux process management. It helped in learning how operating systems create and manage processes and schedule CPU time effectively.
+
+============================================
 END OF REPORT
-=========================================
+=============
