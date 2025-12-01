@@ -1,108 +1,64 @@
-# Output of program
+==================================================
+Process Management Demonstration
+==================================================
+TASK 1: Process Creation Utility
+Creating 3 child processes...
+Parent created child 2052
+Parent created child 2053
+Parent created child 2054
+All children finished.
 
-===============================
-PROCESS MANAGEMENT - OUTPUT LOG
-===============================
+TASK 2: Command Execution Using exec()
+Creating 2 children to execute command: date
+Parent created child 2055 for Task 2
+Parent created child 2056 for Task 2
+All children finished (Task 2).
 
----------------------------
-Task 1: Process Creation
----------------------------
-Enter number of child processes: 3
+Creating 2 children to execute command: ls -la
+Parent created child 2061 for Task 2
+Parent created child 2062 for Task 2
+All children finished (Task 2).
 
---- Task 1: Creating 3 child processes ---
-Child 0: PID = 2412, Parent PID = 2408
-Child 1: PID = 2413, Parent PID = 2408
-Child 2: PID = 2414, Parent PID = 2408
+TASK 3: Zombie & Orphan Processes
+Creating zombie process...
+[Zombie Demo] Parent PID=2051 created child 2067
+[Zombie Demo] Child should become zombie for ~10 seconds...
+👉 Open another terminal and run: ps -el | grep defunct
+👉 Or run: ps aux | grep Z
+[Zombie Demo] Parent has reaped child, zombie cleared.
 
-Parent waited for all child processes.
-All children completed successfully.
+TASK 4: Inspecting Process Info from /proc
+Inspecting process 2051 from /proc filesystem...
 
+=== Process 2051 Status ===
+Name:	python3
+State:	R (running)
+VmSize:	   17160 kB
+VmRSS:	   11776 kB
 
----------------------------
-Task 2: Executing Commands Using exec()
----------------------------
+Executable path: /usr/bin/python3.12
 
---- Task 2: Executing commands in child processes ---
-Executing command: ls
-(output)
-process_management.py
-output.txt
-report.txt
-README.md
+Open file descriptors: 4 files
+  0 -> /dev/pts/2
+  1 -> /home/hp/output.txt
+  2 -> /home/hp/output.txt
+  3 -> [Permission denied]
 
-Executing command: date
-(output)
-Tue Nov 12 14:21:05 IST 2025
+Inspecting process 1 from /proc filesystem...
 
-Executing command: ps
-(output)
-PID   TTY   TIME     CMD
-2408  pts/0 00:00:00 python3
-2412  pts/0 00:00:00 ls
-2413  pts/0 00:00:00 date
-2414  pts/0 00:00:00 ps
+=== Process 1 Status ===
+Name:	systemd
+State:	S (sleeping)
+VmSize:	   22160 kB
+VmRSS:	   12236 kB
 
+File descriptors: [Permission denied]
 
----------------------------
-Task 3A: Zombie Process
----------------------------
-Child running, will finish soon...
-Child finished
-Parent NOT calling wait() → Child becomes ZOMBIE for 10 seconds
+TASK 5: Process Prioritization
+Demonstrating process prioritization with nice values...
+Created child 2070 with target nice value 0
+Created child 2071 with target nice value 10
+Created child 2072 with target nice value 19
+All priority demo children finished
 
-Verification (using terminal):
-$ ps -el | grep defunct
-... Z ... defunct
-
-
----------------------------
-Task 3B: Orphan Process
----------------------------
-Child started. Parent will exit immediately.
-Parent exiting now → child becomes ORPHAN
-After parent exits:
-Child new parent PID = 1 (systemd)
-
-
----------------------------
-Task 4: /proc Information
----------------------------
-Enter PID to inspect: 2408
-
---- Task 4: Reading /proc/2408 Information ---
-
-Name: python3
-State: S (sleeping)
-VmSize: 142000 kB
-VmRSS: 32000 kB
-Threads: 3
-
-Executable Path:
-/usr/bin/python3.10
-
-Open File Descriptors:
-['0', '1', '2', '3', '4']
-
-
----------------------------
-Task 5: Priority Scheduling (nice)
----------------------------
-
---- Task 5: Priority Scheduling Demonstration ---
-
-Child PID 2450 running with nice=0
-Child PID 2451 running with nice=5
-Child PID 2452 running with nice=10
-
-Execution Completed Order (Observed):
-1. nice=0
-2. nice=5
-3. nice=10
-
-Explanation:
-Lower nice value → higher priority → finishes earlier.
-
-
-===============================
-END OF OUTPUT LOG
-===============================
+All tasks completed!
