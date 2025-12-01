@@ -1,2 +1,2 @@
 # O.S-Assignment
-Operating System Lab Manual
+Operating System Lab Assignments
