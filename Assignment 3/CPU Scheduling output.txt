@@ -1,52 +1,144 @@
-CPU SCHEDULING – OUTPUT
-OS Lab Assignment 3
+# Task 1 
 
-==============================
-PRIORITY SCHEDULING OUTPUT
-==========================
+ 1. Priority Scheduling – Gantt Chart Diagram
+ 
+| PID | Burst Time | Priority |
+| --- | ---------- | -------- |
+| P1  | 4          | 1        |
+| P3  | 2          | 2        |
+| P2  | 3          | 5        |
 
-Input:
+
+Priority Scheduling Gantt Chart
+-----------------------------------------------------
+|   P1   |  P3  |    P2    |
+-----------------------------------------------------
+0        4      6         9
+
+
+
+Explanation:
+
+P1 runs first (highest priority)
+
+Then P3
+
+Then P2
+
+
+2. Round Robin Scheduling – Gantt Chart Diagram
+
+| PID              | Burst Time |   |
+| ---------------- | ---------- | - |
+| P1               | 5          |   |
+| P2               | 3          |   |
+| P3               | 4          |   |
+| Time Quantum = 2 |            |   |
+
+
+Execution Timeline
+
+First round: P1(2), P2(2), P3(2)
+Second round: P1(2), P2(1), P3(2)
+Third round: P1(1)
+Done.
+
+Round Robin Gantt Chart (TQ = 2)
+-------------------------------------------------------------------------------------
+| P1 | P2 | P3 | P1 | P2 | P3 | P1 |
+-------------------------------------------------------------------------------------
+0    2    4    6    8    9    11   12
+
+
+# Task 2
+
+Enter total number of blocks: 10
+Enter number of files: 2
+
+--- File 1 ---
+Enter starting block for file 1: 2
+Enter length of file 1: 3
+File 1 allocated from block 2 to 4
+
+--- File 2 ---
+Enter starting block for file 2: 4
+Enter length of file 2: 4
+File 2 cannot be allocated.
+
+Final Block Allocation:
+Block 0 → Free
+Block 1 → Free
+Block 2 → Allocated
+Block 3 → Allocated
+Block 4 → Allocated
+Block 5 → Free
+Block 6 → Free
+Block 7 → Free
+Block 8 → Free
+Block 9 → Free
+
+
+# Task 3
+
+Enter total number of blocks: 10
+Enter number of files: 1
+
+--- File 1 ---
+Enter index block for file 1: 2
+Enter number of data blocks: 3
+Enter block numbers: 3 4 5
+File 1 allocated successfully.
+Index Block: 2
+Data Blocks: [3, 4, 5]
+
+Final Block Allocation Status:
+Block 0 -> Free
+Block 1 -> Free
+Block 2 -> Allocated
+Block 3 -> Allocated
+Block 4 -> Allocated
+Block 5 -> Allocated
+Block 6 -> Free
+Block 7 -> Free
+Block 8 -> Free
+Block 9 -> Free
+
+
+# Task 4 
+
+FIRST FIT
+
+Process 1 (212 KB) → Partition 2
+Process 2 (417 KB) → Partition 5
+Process 3 (112 KB) → Partition 2
+Process 4 (426 KB) → Not Allocated
+Remaining Partition Sizes: [100, 176, 200, 300, 183]
+
+BEST FIT
+
+Process 1 (212 KB) → Partition 3
+Process 2 (417 KB) → Partition 5
+Process 3 (112 KB) → Partition 1
+Process 4 (426 KB) → Not Allocated
+Remaining Partition Sizes: [ -12, 500, -12, 300, 172]
+
+WORST FIT
+
+Process 1 (212 KB) → Partition 5
+Process 2 (417 KB) → Partition 2
+Process 3 (112 KB) → Partition 5
+Process 4 (426 KB) → Not Allocated
+Remaining Partition Sizes: [100, 83, 200, 300, 276]
+
+
+# Task 5
+
+Enter total memory size: 1024
+Enter partition size: 256
 Enter number of processes: 3
-Enter Burst Time for P1: 5
-Enter Priority for P1: 2
-Enter Burst Time for P2: 3
-Enter Priority for P2: 1
-Enter Burst Time for P3: 8
-Enter Priority for P3: 3
 
-Output:
---- Priority Scheduling ---
+Enter size of Process 1: 200 → allocated  
+Enter size of Process 2: 130 → allocated  
+Enter size of Process 3: 300 → NOT allocated  
+Total Internal Fragmentation = 256-200 + 256-130 = 182 KB
 
-PID	BT	Priority	WT	TAT
-P2	3	1		0	3
-P1	5	2		3	8
-P3	8	3		8	16
-
-Average Waiting Time = 3.6666666666666665
-Average Turnaround Time = 9.0
-
-==============================
-ROUND ROBIN SCHEDULING OUTPUT
-=============================
-
-Input:
-Enter number of processes: 3
-Enter Burst Time for P1: 5
-Enter Burst Time for P2: 3
-Enter Burst Time for P3: 8
-Enter Time Quantum: 2
-
-Output:
---- Round Robin Scheduling ---
-
-PID	BT	WT	TAT
-P1	5	8	13
-P2	3	4	7
-P3	8	9	17
-
-Average Waiting Time = 7.0
-Average Turnaround Time = 12.333333333333334
-
-==============================
-END OF CPU SCHEDULING OUTPUT
-============================
