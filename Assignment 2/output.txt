@@ -1,98 +1,31 @@
-OPERATING SYSTEM LAB – PROCESS MANAGEMENT
+# Task 1
 
-=====================================
-TASK 1: PROCESS CREATION USING os.fork()
-========================================
+| Part                                       | Meaning                                               |
+| ------------------------------------------ | ----------------------------------------------------- |
+| `2025-11-15 12:45:33,219`                  | Timestamp (auto-added by logging)                     |
+| `MainProcess`                              | Name of the process (this changes in child processes) |
+| `Logging system initialized successfully.` | Custom message logged by your program                 |
 
-Input:
-Enter number of child processes: 3
 
-Output:
---- Task 1: Creating 3 child processes ---
-Child 0: PID = 12456, Parent PID = 12455
-Child 1: PID = 12457, Parent PID = 12455
-Child 2: PID = 12458, Parent PID = 12455
-Parent process waited for all child processes.
+# Task 2
 
-=====================================
-TASK 2: COMMAND EXECUTION USING exec()
-======================================
+| Log Line            | Meaning                                    |
+| ------------------- | ------------------------------------------ |
+| `Test Task started` | Simulated process started                  |
+| `Test Task ended`   | Simulated process finished after 2 seconds |
 
-Output:
---- Task 2: Executing commands in child processes ---
-Executing command: ls
-Desktop  Documents  Downloads  process_management.py
 
-Executing command: date
-Mon Dec 01 11:45:32 IST 2025
+# Task 3
 
-Executing command: ps
-PID TTY          TIME CMD
-12455 pts/0    00:00:00 python3
-12456 pts/0    00:00:00 ls
-12457 pts/0    00:00:00 date
-12458 pts/0    00:00:00 ps
+2025-11-15 13:10:21,501 - Process-1 - Process-1 started
+2025-11-15 13:10:21,503 - Process-2 - Process-2 started
+2025-11-15 13:10:23,505 - Process-1 - Process-1 ended
+2025-11-15 13:10:23,507 - Process-2 - Process-2 ended
 
-=====================================
-TASK 3A: ZOMBIE PROCESS
-=======================
 
-Output:
---- Task 3A: Zombie Process ---
-Child running, will finish soon...
-Child finished
-Parent NOT calling wait() → Child becomes ZOMBIE for 10 seconds
+# Task 4
 
-Terminal Verification:
-$ ps -el | grep defunct
-12460 Z pts/0    00:00:00 python3 <defunct>
-
-=====================================
-TASK 3B: ORPHAN PROCESS
-=======================
-
-Output:
---- Task 3B: Orphan Process ---
-Parent exiting now → child becomes ORPHAN
-Child started. Parent will exit immediately.
-Child new parent PID = 1
-
-=====================================
-TASK 4: INSPECT PROCESS INFO FROM /proc
-=======================================
-
-Input:
-Enter PID to inspect: 12455
-
-Output:
-Name:   python3
-State:  R (running)
-VmSize:  32768 kB
-VmRSS:   12400 kB
-
-Executable Path:
-/usr/bin/python3.10
-
-Open File Descriptors:
-['0', '1', '2', '3']
-
-=====================================
-TASK 5: PROCESS PRIORITIZATION (nice)
-=====================================
-
-Output:
---- Task 5: Priority Scheduling Demonstration ---
-Child PID 12470 running with nice=0
-Child PID 12471 running with nice=5
-Child PID 12472 running with nice=10
-
-Execution Observed:
-Child with nice=0 finished first
-Child with nice=5 finished second
-Child with nice=10 finished last
-
-Conclusion: Higher nice value reduces CPU priority.
-
-=====================================
-END OF OUTPUT FILE
-==================
+2025-11-15 13:18:42,410 - Process-1 - Process-1 started
+2025-11-15 13:18:42,412 - Process-2 - Process-2 started
+2025-11-15 13:18:44,414 - Process-1 - Process-1 ended
+2025-11-15 13:18:44,416 - Process-2 - Process-2 ended
