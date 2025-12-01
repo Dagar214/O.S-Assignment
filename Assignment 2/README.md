@@ -1,160 +1,97 @@
-# 🧪 OS Lab Assignment 2  
-## System Startup & Process Management Simulation (multiprocessing + logging)
+# Process Creation and Management – OS Lab
+
+## Course Details
+
+* **Course Code:** ENCS351 – Operating System
+* **Program:** B.Tech CSE (AI & ML)
+
+## Experiment Title
+
+**Process Creation and Management Using Python OS Module**
 
 ---
 
-### Course Details
-**Course:** B.Tech. C.S.E(Ai & Ml)  
-**Subject:** Operating Systems Lab  
-**Experiment No.:** 2  
-**Topic:** System Startup, Process Creation & Termination Simulation  
-**Language Used:** Python  
-**Platform:** Linux / WSL / Ubuntu Terminal
+## Files Included
+
+* `process_management.py` – Python script implementing all lab tasks
+* `output.txt` – Sample output of each task
+* `report.txt` / `report.pdf` – Experiment report
+* `README.md` – Instructions to run the program
 
 ---
 
-## Folder Contents
+## Requirements
 
-Assignment2
+* Linux-based Operating System (Ubuntu recommended)
+* Python 3.x
 
-│
-
-├── Process_Management.py
-
-├── output.txt
-
-├── report.txt
-
-└── README.md
-
+>  Note: This code uses `os.fork()` and `/proc`, which work only on Linux / Unix systems.
 
 ---
 
-## ✅ Objective
-The objective of this assignment is to:
+## How to Run the Program
 
-- Simulate an operating system startup
-- Create and execute multiple processes
-- Log process activity using `logging`
-- Demonstrate process lifecycle:
-  - start
-  - execution
-  - termination
-- Generate a system-like log file
+1. Open terminal in the project directory
+2. Run the Python file:
 
----
+```bash
+python3 process_management.py
+```
 
-## ✅ Tasks Implemented
+3. Choose a task from the menu:
 
-###  Sub-Task 1 – Logging Setup
-- Initialized logging with:
-  - timestamps
-  - process names
-  - messages
-- Output stored in `process_log.txt`
-
-###  Sub-Task 2 – Process Function
-- Created a dummy system process
-- Simulated execution using `time.sleep()`
-
-###  Sub-Task 3 – Process Creation
-- Created 3 concurrent processes:
-  - Process-1
-  - Process-2
-  - Background-Service
-
-###  Sub-Task 4 – Termination
-- Used `join()` to ensure proper shutdown
-- Displayed completion message
+```
+1 – Process Creation
+2 – Command Execution using exec()
+3 – Zombie Process
+4 – Orphan Process
+5 – Read /proc Information
+6 – Process Priority using nice()
+```
 
 ---
 
-##  How to Run the Program
+## Task Overview
 
-### ✅ Step 1: Open Terminal
+### Task 1 – Process Creation
 
+Creates N child processes using `os.fork()` and displays PID and PPID.
 
-### ✅ Step 2: Run the Python script
+### Task 2 – Command Execution
 
+each child executes Linux commands like `ls`, `date`, `ps` using `execvp()`.
 
-### ✅ Step 3: Choose an Option
-You will see:
+### Task 3 – Zombie & Orphan Process
 
-1.Start System Simulation
+Demonstrates zombie processes (no `wait()`) and orphan processes (parent exits early).
 
-2.Show Process Logs
+### Task 4 – /proc Inspection
 
-3.Exit
+Reads process information such as name, state, memory usage, executable path, and file descriptors.
 
+### Task 5 – Process Priority
 
-Enter the number to execute a task.
-
----
-
-##  Sample Output Preview
-
-SYSTEM BOOTING UP...
-
-System Shutdown Completed ✅
-Check process_log.txt for logs.
-
-
-More detailed output available in:
-✅ `output.txt`
+Shows CPU scheduling impact using different `nice()` values.
 
 ---
 
-##  Log File Preview (process_log.txt)
+## Output
 
-2025-07-16  - Process-1 - Process-1 started
-
-2025-07-16  - Process-2 - Process-2 started
-
-2025-07-16  - Background-Service - Background-Service started
-
+* Outputs are displayed in the terminal
+* Sample output is saved in `output.txt`
 
 ---
 
-## ✅ Learning Outcomes
-After completing this assignment, we learned:
+## Conclusion
 
-- System startup simulation
-- Multiprocessing in Python
-- Concurrent process execution
-- Logging for monitoring processes
-- Proper process shutdown
+This experiment provides hands-on understanding of Linux process creation, execution, scheduling, and monitoring through Python.
 
 ---
 
-##  Files Description
+## Author
 
-| File | Description |
-|------|-------------|
-| `Process_Management.py` | Main program |
-| `output.txt` | Sample program output |
-| `report.txt` | Implementation report |
-| `README.md` | Instructions & documentation |
+**Dev Dagar**
 
 ---
 
-## ✅ Requirements
-- Linux Environment / WSL / Ubuntu
-- Python 3.x
-- multiprocessing module
-- logging module
-
----
-
-##  Conclusion
-This assignment successfully demonstrates system-like behavior using Python multiprocessing. The simulation helps understand how an operating system initializes, runs, monitors, and terminates processes.
-
----
-
-### ✅ Author
-**Student Name:** Dev  
-**Roll No:** 2301730073
-
-**University:** K.R. Mangalam University
-
----
-
+Upload all files to LMS and provide GitHub repository link as instructed.
