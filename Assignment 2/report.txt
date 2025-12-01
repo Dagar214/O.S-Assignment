@@ -5,7 +5,7 @@ Experiment Title: Process Creation and Management Using Python OS Module
 ========================================================================
 
 Course: ENCS351 – Operating System
-Program: B.Tech CSE (AI & ML / DS / Cyber / FSD / UX-UI)
+Program: B.Tech CSE (AI & ML)
 
 ============================================
 
